@@ -1,0 +1,19 @@
+html.dark {
+    @apply bg-canvas-950;
+    color-scheme: dark;
+  }
+  
+html.light {
+  @apply bg-canvas-100;
+}
+
+body {
+  @apply overflow-x-hidden font-mono;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Unused class, fixes issue with relative _font paths in production for IBM Plex Mono font */
+.font-mono-scan-me { 
+  @apply font-mono;
+}
