@@ -2,6 +2,7 @@
 import CategoryPill from '~/components/CategoryPill.vue'
 
 const { data } = await useAsyncData('home', () => queryContent().limit(15).find())
+defineOgImageComponent('Default')
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const { data } = await useAsyncData('home', () => queryContent().limit(15).find(
     <div class="text-center space-y-2">
       <h1>Foundations</h1>
       <p class="text-sm text-zinc-500">
-        A blog dedicated to key computer science, software engineering, web development & security concepts.
+        Writing dedicated to key computer science, software engineering, web development & security concepts.
       </p>
     </div>
     <div class="flex flex-col gap-4">

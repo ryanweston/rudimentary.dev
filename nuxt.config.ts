@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@unocss/nuxt', '@nuxt/fonts'],
+  modules: ['@nuxt/content', '@unocss/nuxt', '@nuxt/fonts', 'nuxt-og-image'],
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/styles/main.css',
@@ -23,5 +23,10 @@ export default defineNuxtConfig({
         'bash',
       ],
     },
+  },
+  ogImage: {
+    fonts: [
+      'IBM+Plex+Mono',
+    ],
   },
 })

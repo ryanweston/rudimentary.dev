@@ -4,6 +4,11 @@ const { data } = await useAsyncData(`${slug[0]}`, () => queryContent().where({ _
 
 definePageMeta({ layout: 'article' })
 
+defineOgImageComponent('ArticleOG', {
+  title: data.value?.title,
+  description: data.value?.description,
+})
+
 useHead({ title: data.value?.title })
 </script>
 
