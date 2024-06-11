@@ -29,4 +29,11 @@ export default defineNuxtConfig({
       'IBM+Plex+Mono',
     ],
   },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
 })
