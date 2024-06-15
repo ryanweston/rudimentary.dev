@@ -6,7 +6,7 @@ defineOgImageComponent('Default')
 <template>
   <div class="space-y-12 font-mono">
     <div class="text-center space-y-2">
-      <h1>Foundations</h1>
+      <h1>Rudimentary</h1>
       <p class="text-sm text-zinc-500">
         Writing dedicated to key computer science, software engineering, web development & security concepts.
       </p>

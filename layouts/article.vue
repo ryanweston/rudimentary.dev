@@ -4,11 +4,11 @@
       to="/"
       class="text-sm font-mono mb-16"
     >
-      Foundations
+      Rudimentary
     </NuxtLink>
     <div class="max-w-xl">
       <slot />
     </div>
-    <Footer class="mt-10" />
+    <Footer class="mt-14" />
   </div>
 </template>

@@ -21,7 +21,7 @@ withDefaults(defineProps<{
       </div>
     </div>
     <p class="absolute bottom-10 text-lg">
-      Foundations
+      Rudimentary
     </p>
   </div>
 </template>
