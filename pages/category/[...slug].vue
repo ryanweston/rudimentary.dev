@@ -1,12 +1,36 @@
 <script lang="ts" setup>
+import { categoryDescriptions } from '~/constants/categories'
+
 const slug = useRoute().params.slug
 const { data } = await useAsyncData(`category-${slug[0]}`, () => queryContent().where({ categories: { $contains: slug[0] } }).findOne())
 
 definePageMeta({ layout: 'article' })
 
 useHead({ title: data.value?.title })
+
+// const categories = await useAsyncData('categories', () => queryContent().only('categories').find())
+const posts = await useAsyncData(`category-${slug[0]}`, () => queryContent().where({ categories: { $contains: slug[0] } }).find())
+
+defineOgImageComponent('ArticleOG', {
+  title: data.value?.title,
+  description: data.value?.description,
+})
 </script>
 
 <template>
-  <main />
+  <main>
+    <div class="flex flex-col gap-1 mb-8">
+      <h1 class="font-mono normal-case">
+        {{ (slug[0].charAt(0).toUpperCase() + slug[0].slice(1)).split('-').join(' ') }}
+      </h1>
+      <p class="text-sm text-zinc-500">
+        {{ categoryDescriptions[slug[0]] ? categoryDescriptions[slug[0]] : '' }}
+      </p>
+    </div>
+    <Article
+      v-for="article in posts.data.value"
+      :key="article.id"
+      :article="article"
+    />
+  </main>
 </template>

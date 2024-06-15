@@ -23,7 +23,7 @@ useHead({ title: data.value?.title })
           {{ data.title }}
         </h1>
         <div class="flex gap-2 items-center">
-          <div>
+          <div class="flex gap-2">
             <CategoryPill
               v-for="cat in data.categories"
               :key="cat"

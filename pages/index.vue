@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import CategoryPill from '~/components/CategoryPill.vue'
-
 const { data } = await useAsyncData('home', () => queryContent().limit(15).find())
 defineOgImageComponent('Default')
 </script>
@@ -14,33 +12,11 @@ defineOgImageComponent('Default')
       </p>
     </div>
     <div class="flex flex-col gap-4">
-      <div
+      <Article
         v-for="article in data"
         :key="article.id"
-        class="flex justify-between gap-4"
-      >
-        <div class="flex flex-col gap-2">
-          <NuxtLink
-            class="text-sm"
-            :to="article._path"
-          >
-            {{ article.title }}
-          </NuxtLink>
-          <div class="flex gap-1">
-            <CategoryPill
-              v-for="cat in article.categories"
-              :key="cat"
-              :cat="cat"
-            />
-          </div>
-        </div>
-        <div class="text-xs text-zinc-500">
-          {{ new Date().toLocaleDateString(undefined, { weekday: 'long',
-                                                        year: 'numeric',
-                                                        month: 'long',
-                                                        day: 'numeric' }) }}
-        </div>
-      </div>
+        :article="article"
+      />
     </div>
   </div>
 </template>
