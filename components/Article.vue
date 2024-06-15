@@ -5,7 +5,7 @@ defineProps<{ article: ParsedContent }>()
 </script>
 
 <template>
-  <div class="flex justify-between gap-4">
+  <div class="flex flex-col md:flex-row justify-between gap-2 md:gap-4">
     <div class="flex flex-col gap-2">
       <NuxtLink
         class="text-xs font-mono"

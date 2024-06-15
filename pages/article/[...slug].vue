@@ -36,7 +36,7 @@ useSeoMeta({
         <h1 class="font-mono">
           {{ data.title }}
         </h1>
-        <div class="flex gap-2 items-center">
+        <div class="flex flex-col md:flex-row gap-2 md:items-center">
           <div class="flex gap-2">
             <CategoryPill
               v-for="cat in data.categories"
