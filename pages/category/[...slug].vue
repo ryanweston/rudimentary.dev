@@ -27,10 +27,13 @@ defineOgImageComponent('ArticleOG', {
         {{ categoryDescriptions[slug[0]] ? categoryDescriptions[slug[0]] : '' }}
       </p>
     </div>
-    <Article
-      v-for="article in posts.data.value"
-      :key="article.id"
-      :article="article"
-    />
+    <div class="flex flex-col divide-y-1 divide-dashed">
+      <Article
+        v-for="article in posts.data.value"
+        :key="article.id"
+        class="py-4"
+        :article="article"
+      />
+    </div>
   </main>
 </template>

@@ -1,6 +1,6 @@
 ---
 title: Debouncing & throttling
-description: A brief overview of debouncing & throttling with examples
+description: What is debouncing & throttling? Explained with examples in JavaScript.
 publishedAt:
 lastUpdated:
 categories:
@@ -11,7 +11,7 @@ references:
     - https://www.freecodecamp.org/news/javascript-debounce-example/
 ---
 
-## What are debouncing and throttling?
+## What is debouncing and throttling?
 
 Debouncing and throttling are two concepts used to help limit the amount of function executions. They're extremely important to managing performance. They are used everywhere if you know where to look.
 

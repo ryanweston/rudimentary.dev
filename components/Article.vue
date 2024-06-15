@@ -8,7 +8,7 @@ defineProps<{ article: ParsedContent }>()
   <div class="flex justify-between gap-4">
     <div class="flex flex-col gap-2">
       <NuxtLink
-        class="text-sm"
+        class="text-xs font-mono"
         :to="article._path"
       >
         {{ article.title }}

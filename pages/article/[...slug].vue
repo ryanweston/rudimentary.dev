@@ -1,6 +1,14 @@
 <script lang="ts" setup>
 const slug = useRoute().params.slug
+
 const { data } = await useAsyncData(`${slug[0]}`, () => queryContent().where({ _path: { $eq: `/article/${slug[0]}` as string } }).findOne())
+const { data: surround } = await useAsyncData(`${slug[0]}-surround`, () => queryContent()
+  .where({ categories: { $containsAny: data.value?.categories }, _path: { $ne: `/article/${slug[0]}` } })
+  .sort({ date: 1 })
+  .limit(3)
+  .find())
+
+const surroundFiltered = computed(() => surround.value?.filter(Boolean) || [])
 
 definePageMeta({ layout: 'article' })
 
@@ -9,7 +17,13 @@ defineOgImageComponent('ArticleOG', {
   description: data.value?.description,
 })
 
-useHead({ title: data.value?.title })
+useSeoMeta({
+  title: () => data.value?.title || 'Rudimentary',
+  ogTitle: () => data.value?.title || 'Rudimentary',
+  description: () => data.value?.description || 'An article on Rudimentary',
+  ogDescription: () => data.value?.description || 'An article on Rudimentary',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
@@ -18,8 +32,8 @@ useHead({ title: data.value?.title })
       v-if="data"
       :value="data"
     >
-      <header class="flex flex-col gap-2 mb-8">
-        <h1 class="font-mono text-lg">
+      <header class="flex flex-col gap-2 mb-8 border-b border-zinc-200 pb-4 border-dashed">
+        <h1 class="font-mono">
           {{ data.title }}
         </h1>
         <div class="flex gap-2 items-center">
@@ -48,7 +62,7 @@ useHead({ title: data.value?.title })
         v-if="data.references && data.references.length"
         class="mt-10"
       >
-        <p class="text-sm mb-1">
+        <p class="font-mono text-xs mb-4 border-b border-zinc-200 pb-2 border-dashed">
           References & learning resources:
         </p>
         <ul>
@@ -58,11 +72,29 @@ useHead({ title: data.value?.title })
           >
             <a
               target="_blank"
-              class="text-sm text-blue-700 hover:underline"
+              class="text-xs text-blue-700 hover:underline font-mono"
               :href="reference"
             >{{ reference }}</a>
           </li>
         </ul>
+      </div>
+
+      <div v-if="surround && surround.length">
+        <div class="mt-10">
+          <p class="text-xs font-mono mb-4 border-b border-zinc-200 pb-2 border-dashed">
+            Related articles
+          </p>
+          <div class="flex flex-col divide-y-1 divide-dashed">
+            <Article
+              v-for="article in surroundFiltered"
+              :key="article._path"
+              :article="article"
+              class="py-4"
+            >
+              {{ article.title }}
+            </Article>
+          </div>
+        </div>
       </div>
     </ContentRenderer>
   </main>
