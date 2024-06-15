@@ -43,6 +43,27 @@ useHead({ title: data.value?.title })
       <template #empty>
         <p>No content found.</p>
       </template>
+
+      <div
+        v-if="data.references && data.references.length"
+        class="mt-10"
+      >
+        <p class="text-sm mb-1">
+          References & learning resources:
+        </p>
+        <ul>
+          <li
+            v-for="reference in data.references"
+            :key="reference"
+          >
+            <a
+              target="_blank"
+              class="text-sm text-blue-700 hover:underline"
+              :href="reference"
+            >{{ reference }}</a>
+          </li>
+        </ul>
+      </div>
     </ContentRenderer>
   </main>
 </template>

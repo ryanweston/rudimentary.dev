@@ -6,11 +6,14 @@ lastUpdated:
 categories:
     - concepts
     - computer-science
+references:
+    - https://kettanaito.com/blog/debounce-vs-throttle
+    - https://www.freecodecamp.org/news/javascript-debounce-example/
 ---
 
 ## What are debouncing and throttling?
 
-Debouncing and throttling are two concepts used to help limit the amount of action executions. They're extremely important to managing performance. They are used everywhere if you know where to look.
+Debouncing and throttling are two concepts used to help limit the amount of function executions. They're extremely important to managing performance. They are used everywhere if you know where to look.
 
 ## What is throttling?
 
