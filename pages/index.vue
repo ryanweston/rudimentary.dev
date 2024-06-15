@@ -1,6 +1,14 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('home', () => queryContent().limit(15).find())
 defineOgImageComponent('Default')
+
+useSeoMeta({
+  title: 'Rudimentary',
+  ogTitle: 'Rudimentary',
+  description: 'Writing dedicated to key computer science, software engineering, web development & security concepts.',
+  ogDescription: 'Writing dedicated to key computer science, software engineering, web development & security concepts.',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
