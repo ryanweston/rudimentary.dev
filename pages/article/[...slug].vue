@@ -32,7 +32,7 @@ useSeoMeta({
       v-if="data"
       :value="data"
     >
-      <header class="flex flex-col gap-2 mb-8 border-b border-zinc-200 pb-4 border-dashed">
+      <header class="flex flex-col gap-2 mb-10 border-b border-zinc-200 pb-6 border-dashed">
         <h1 class="font-mono">
           {{ data.title }}
         </h1>
