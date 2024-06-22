@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       langs: [
         'javascript',
         'bash',
+        'html',
       ],
     },
   },
