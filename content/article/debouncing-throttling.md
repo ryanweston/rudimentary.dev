@@ -1,8 +1,8 @@
 ---
 title: Debouncing & throttling
 description: What is debouncing & throttling? Explained with examples in JavaScript.
-publishedAt:
-lastUpdated:
+publishedAt: 2024-22-05 17:00:39
+lastUpdated: 2024-22-05 17:00:39
 categories:
     - concepts
     - computer-science
