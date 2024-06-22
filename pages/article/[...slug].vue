@@ -45,10 +45,10 @@ useSeoMeta({
             />
           </div>
           <div class="text-xs text-zinc-500">
-            {{ new Date(data.lastUpdated).toLocaleDateString(undefined, { weekday: 'long',
-                                                                          year: 'numeric',
-                                                                          month: 'long',
-                                                                          day: 'numeric' }) }}
+            {{ new Date(data.publishedDate).toLocaleDateString(undefined, { weekday: 'long',
+                                                                            year: 'numeric',
+                                                                            month: 'long',
+                                                                            day: 'numeric' }) }}
           </div>
         </div>
       </header>
