@@ -22,10 +22,10 @@ defineProps<{ article: ParsedContent }>()
       </div>
     </div>
     <div class="text-xs text-zinc-500">
-      {{ new Date().toLocaleDateString(undefined, { weekday: 'long',
-                                                    year: 'numeric',
-                                                    month: 'long',
-                                                    day: 'numeric' }) }}
+      {{ new Date(article.lastUpdated).toLocaleDateString(undefined, { weekday: 'long',
+                                                                       year: 'numeric',
+                                                                       month: 'long',
+                                                                       day: 'numeric' }) }}
     </div>
   </div>
 </template>
