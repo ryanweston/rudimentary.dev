@@ -6,6 +6,7 @@ export default antfu({
     'node_modules',
   ],
   rules: {
+    'node/prefer-global/process': 'off',
     'vue/max-attributes-per-line': [
       'error',
       {

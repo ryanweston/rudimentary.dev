@@ -7,7 +7,9 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-og-image',
     '@nuxtjs/sitemap',
+    'nuxt-simple-robots',
   ],
+  // site: { indexable: process.env.NUXT_SITE_ENV === 'production' },
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/styles/main.css',
