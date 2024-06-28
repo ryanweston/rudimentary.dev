@@ -1,7 +1,8 @@
 body {
-  @apply overflow-x-hidden font-mono;
+  @apply overflow-x-hidden font-mono bg-zinc-950 text-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 
 /* Unused class, fixes issue with relative _font paths in production for IBM Plex Mono font */

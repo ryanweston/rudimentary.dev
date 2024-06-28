@@ -5,7 +5,7 @@
         <h1 class="font-mono text-5xl">
           Rudimentary
         </h1>
-        <p class="text-lg text-zinc-500">
+        <p class="text-lg text-zinc-400">
           Writing dedicated to key computer science, software engineering, web development & security concepts.
         </p>
       </div>

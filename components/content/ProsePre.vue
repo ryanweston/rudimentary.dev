@@ -30,7 +30,7 @@ defineProps({
 <template>
   <pre
     :class="$props.class"
-    class="bg-zinc-800 rounded-lg px-6 py-6 overflow-x-auto text-sm mb-6"
+    class="bg-zinc-900 rounded-lg px-6 py-6 overflow-x-auto text-sm mb-6"
   ><slot /></pre>
 </template>
 

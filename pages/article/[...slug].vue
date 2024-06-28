@@ -32,8 +32,8 @@ useSeoMeta({
       v-if="data"
       :value="data"
     >
-      <header class="flex flex-col gap-2 mb-10 border-b border-zinc-200 pb-6 border-dashed">
-        <h1 class="font-mono">
+      <header class="flex flex-col gap-2 mb-10 border-b border-zinc-800 pb-6 border-dashed">
+        <h1 class="font-mono text-xl">
           {{ data.title }}
         </h1>
         <div class="flex flex-col md:flex-row gap-2 md:items-center">
@@ -44,7 +44,7 @@ useSeoMeta({
               :cat="cat"
             />
           </div>
-          <div class="text-xs text-zinc-500">
+          <div class="text-xs text-zinc-400">
             {{ new Date(data.publishedDate).toLocaleDateString(undefined, { weekday: 'long',
                                                                             year: 'numeric',
                                                                             month: 'long',
@@ -62,7 +62,7 @@ useSeoMeta({
         v-if="data.references && data.references.length"
         class="mt-10"
       >
-        <p class="font-mono text-xs mb-4 border-b border-zinc-200 pb-2 border-dashed">
+        <p class="font-mono text-xs mb-4 border-b border-zinc-800 pb-2 border-dashed">
           References & learning resources:
         </p>
         <ul>
@@ -72,7 +72,7 @@ useSeoMeta({
           >
             <a
               target="_blank"
-              class="text-xs text-blue-700 hover:underline font-mono"
+              class="text-xs text-blue-400 hover:underline font-mono"
               :href="reference"
             >{{ reference }}</a>
           </li>
@@ -81,7 +81,7 @@ useSeoMeta({
 
       <div v-if="surround && surround.length">
         <div class="mt-10">
-          <p class="text-xs font-mono mb-4 border-b border-zinc-200 pb-2 border-dashed">
+          <p class="text-xs font-mono mb-4 border-b border-zinc-800 pb-2 border-dashed">
             Related articles
           </p>
           <div class="flex flex-col divide-y-1 divide-dashed">

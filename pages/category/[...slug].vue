@@ -23,11 +23,11 @@ defineOgImageComponent('ArticleOG', {
       <h1 class="font-mono normal-case">
         {{ (slug[0].charAt(0).toUpperCase() + slug[0].slice(1)).split('-').join(' ') }}
       </h1>
-      <p class="text-sm text-zinc-500">
+      <p class="text-sm text-zinc-400">
         {{ categoryDescriptions[slug[0]] ? categoryDescriptions[slug[0]] : '' }}
       </p>
     </div>
-    <div class="flex flex-col divide-y-1 divide-dashed">
+    <div class="flex flex-col divide-y-1 divide-dashed divide-zinc-700">
       <Article
         v-for="article in posts.data.value"
         :key="article.id"

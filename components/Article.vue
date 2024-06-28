@@ -8,7 +8,7 @@ defineProps<{ article: ParsedContent }>()
   <div class="flex flex-col md:flex-row justify-between gap-2 md:gap-4">
     <div class="flex flex-col gap-2">
       <NuxtLink
-        class="text-xs font-mono"
+        class="text-sm font-mono"
         :to="article._path"
       >
         {{ article.title }}
@@ -21,7 +21,7 @@ defineProps<{ article: ParsedContent }>()
         />
       </div>
     </div>
-    <div class="text-xs text-zinc-500">
+    <div class="text-xs text-zinc-400">
       {{ new Date(article.publishedDate).toLocaleDateString(undefined, { weekday: 'long',
                                                                          year: 'numeric',
                                                                          month: 'long',
