@@ -84,7 +84,7 @@ useSeoMeta({
           <p class="text-xs font-mono mb-4 border-b border-zinc-800 pb-2 border-dashed">
             Related articles
           </p>
-          <div class="flex flex-col divide-y-1 divide-dashed">
+          <div class="flex flex-col divide-y-1 divide-dashed divide-zinc-800">
             <Article
               v-for="article in surroundFiltered"
               :key="article._path"

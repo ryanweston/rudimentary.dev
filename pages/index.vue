@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent().limit(15).find())
+const { data } = await useAsyncData('home', () => queryContent().sort({ publishedDate: -1 }).limit(15).find())
 defineOgImageComponent('Default')
 
 useSeoMeta({

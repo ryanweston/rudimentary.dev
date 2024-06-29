@@ -1,8 +1,8 @@
 ---
 title: Canonical URLs
 description: What are canonical URLs and how can they be used?
-publishedDate: Sat, 22 Jun 2024 06:00:00 GMT+0100
-lastUpdated: Sat, 22 Jun 2024 06:00:00 GMT+0100
+publishedDate: 2024-06-22
+lastUpdated: 2024-06-22
 categories:
     - web-dev
     - concepts

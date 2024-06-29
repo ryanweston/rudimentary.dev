@@ -8,8 +8,7 @@ definePageMeta({ layout: 'article' })
 
 useHead({ title: data.value?.title })
 
-// const categories = await useAsyncData('categories', () => queryContent().only('categories').find())
-const posts = await useAsyncData(`category-${slug[0]}`, () => queryContent().where({ categories: { $contains: slug[0] } }).find())
+const posts = await useAsyncData(`category-${slug[0]}`, () => queryContent().where({ categories: { $contains: slug[0] } }).sort({ publishedDate: -1 }).find())
 
 defineOgImageComponent('ArticleOG', {
   title: data.value?.title,
